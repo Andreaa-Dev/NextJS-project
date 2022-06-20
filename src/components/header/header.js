@@ -89,7 +89,7 @@ const styles = {
   nav: {
     mx: "auto",
     display: "none",
-    "@media screen and (minWidth: 1024px)": {
+    "@media screen and (min-width: 1024px)": {
       display: "block",
     },
     a: {

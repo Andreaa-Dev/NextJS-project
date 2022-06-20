@@ -130,7 +130,7 @@ const styles = {
       },
       ".react-multi-carousel-item--active:nth-of-type(4n)": {
         opacity: "0.5",
-        "@media screen and (maxWidth: 1620px)": {
+        "@media screen and (max-width: 1620px)": {
           opacity: 1,
         },
       },

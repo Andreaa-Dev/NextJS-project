@@ -10,7 +10,16 @@ export default function Banner() {
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
-          <Heading as="h1"></Heading>
+          <Heading as="h1" variant="heroPrimary">
+            Top Quality Digital Products to Explore
+          </Heading>
+          <Text as="p" variant="heroSecondary">
+            Check out our website
+          </Text>
+          <Button variant="primary">Explore</Button>
+        </Box>
+        <Box style={styles.banner.imageBox}>
+          <Image src={BannerImg} alt="banner" />
         </Box>
       </Container>
     </section>

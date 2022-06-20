@@ -10,7 +10,6 @@ import {
   FaGithubAlt,
   FaDribbble,
 } from "react-icons/fa";
-// import Radium from "radium";
 
 import menuItems from "./header.data";
 
@@ -35,6 +34,7 @@ const social = [
 
 function MobileDrawer() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
     <Drawer
       width="320px"
@@ -89,7 +89,8 @@ const styles = {
     justifyContent: "center",
     flexShrink: "0",
     width: "26px",
-    "@media screen and (minWidth: 1024px)": {
+    marginLeft: "20px",
+    "@media screen and (min-width: 1024px)": {
       display: "none",
     },
   },

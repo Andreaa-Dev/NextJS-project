@@ -82,7 +82,7 @@ const styles = {
       backgroundPosition: "center center",
       width: 215,
       height: 60,
-      "@media screen and (maxWidth:1220px)": {
+      "@media screen and (max-width:1220px)": {
         display: "none",
       },
     },
