@@ -1,3 +1,9 @@
-## Getting Started
+# Sections
 
-coming soon
+### Header section:
+
+<img src= "header.png">
+
+### Feature section:
+
+<img src= "feature.png">

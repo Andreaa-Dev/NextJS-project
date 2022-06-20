@@ -94,7 +94,6 @@ const styles = {
       display: "none",
     },
   },
-
   drawer: {
     width: "100%",
     height: "100%",
