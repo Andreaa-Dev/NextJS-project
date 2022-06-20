@@ -31,7 +31,28 @@ const data = [
 ];
 
 export default function WorkFlow() {
-  return <h1>Workflow</h1>;
+  return (
+    <section sx={styles.workflow}>
+      <Container>
+        <SectionHeader
+          slogan="WHATS THE FUNCTION"
+          title="Meet the feature if our products"
+          isWhite={true}
+        />
+      </Container>
+      <Grid sx={styles.grid}>
+        {data.map((item) => (
+          <Box sx={styles.card} key={item.id}>
+            <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
+            <Box sx={styles.wrapper}>
+              <Heading sx={styles.wrapper.title}>{item.title}</Heading>
+              <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+            </Box>
+          </Box>
+        ))}
+      </Grid>
+    </section>
+  );
 }
 
 const styles = {
@@ -46,6 +67,7 @@ const styles = {
   },
   grid: {
     mb: -1,
+    m: "10px",
     pt: 0,
     gridGap: [
       "35px 0",

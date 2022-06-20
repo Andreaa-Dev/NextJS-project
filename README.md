@@ -11,3 +11,7 @@
 ### Core Feature section:
 
 <img src= "core-feature.png">
+
+### Product Feature section:
+
+<img src= "product-feature.png">
