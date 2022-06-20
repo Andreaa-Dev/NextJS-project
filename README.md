@@ -1,3 +1,7 @@
+# Live version
+
+coming soon ...
+
 # Sections
 
 ### Header section:
@@ -16,6 +20,14 @@
 
 <img src= "product-feature.png">
 
-### Product Feature section:
+### Price Plan section:
 
 <img src= "pricing-plan.png">
+
+### Team section:
+
+<img src= "team.png">
+
+### Customer review section:
+
+<img src= "review.png">
