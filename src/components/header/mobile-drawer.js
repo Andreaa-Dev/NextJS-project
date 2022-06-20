@@ -10,6 +10,8 @@ import {
   FaGithubAlt,
   FaDribbble,
 } from "react-icons/fa";
+// import Radium from "radium";
+
 import menuItems from "./header.data";
 
 const social = [
@@ -31,7 +33,7 @@ const social = [
   },
 ];
 
-export default function MobileDrawer() {
+function MobileDrawer() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <Drawer
@@ -43,9 +45,42 @@ export default function MobileDrawer() {
       }
       open={isDrawerOpen}
       toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)}
-    />
+      closeButton={<IoMdClose size="24px" color="#000000" />}
+      drawerStyle={styles.drawer}
+      closeBtnStyle={styles.close}
+    >
+      <Scrollbars autoHide>
+        <Box sx={styles.content}>
+          <Box sx={styles.menu}>
+            {menuItems.map((menuItem, i) => (
+              <Link
+                activeClass="active"
+                to={menuItem.path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={i}
+              >
+                {menuItem.label}
+              </Link>
+            ))}
+          </Box>
+          <Box sx={styles.menuFooter}>
+            <Box sx={styles.social}>
+              {social.map((socialItem, i) => (
+                <Box as="span" key={i} sx={styles.social.icon}>
+                  <Link to={socialItem.path}>{socialItem.icon}</Link>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Box>
+      </Scrollbars>
+    </Drawer>
   );
 }
+export default MobileDrawer;
 
 const styles = {
   handler: {
@@ -54,8 +89,7 @@ const styles = {
     justifyContent: "center",
     flexShrink: "0",
     width: "26px",
-
-    "@media screen and (min-width: 1024px)": {
+    "@media screen and (minWidth: 1024px)": {
       display: "none",
     },
   },
