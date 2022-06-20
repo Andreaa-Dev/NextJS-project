@@ -185,6 +185,18 @@ export default function TeamSection() {
           slogan="our team"
           title="The most qualified and talented individual"
         />
+        <Grid sx={styles.grid}>
+          {data.map((item) => (
+            <TeamCard
+              key={item.id}
+              src={item.imgSrc}
+              alt={item.altText}
+              title={item.title}
+              designation={item.designation}
+              social={item.socialProfile}
+            />
+          ))}
+        </Grid>
       </Container>
     </section>
   );
