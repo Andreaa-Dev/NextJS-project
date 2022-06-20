@@ -28,6 +28,25 @@ export default function PriceCard({
           <Text as="p">{description}</Text>
         </Box>
         <List items={points} childStyle={styles.listItem}></List>
+        <Text className="package__price" sx={styles.price}>
+          {priceWithUnit}
+          <span>/Monthly</span>
+        </Text>
+        <Box sx={styles.buttonGroup}>
+          <Button variant="primary" aria-label={buttonText}>
+            {buttonText}
+          </Button>
+          {anotherOption && (
+            <Button
+              variant="textButton"
+              className="free__trial"
+              aria-label={anotherOption}
+              sx={{ color: "black" }}
+            >
+              {anotherOption}
+            </Button>
+          )}
+        </Box>
       </Box>
     </Card>
   );

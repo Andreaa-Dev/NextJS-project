@@ -270,8 +270,9 @@ export default function Package() {
   const handlePricingPlan = (plan) => {
     if (plan === "annual ") {
       setState({ active: "annual", pricingPlan: annual });
+    } else {
+      setState({ active: "monthly", pricingPlan: monthly });
     }
-    setState({ active: "monthly", pricingPlan: monthly });
   };
   return (
     <section sx={{ variant: "section.pricing" }}>
@@ -290,7 +291,7 @@ export default function Package() {
             <button
               className={state.active === "annual" ? "active" : ""}
               type="button"
-              aria-label="Monthly"
+              aria-label="Annual"
               onClick={() => handlePricingPlan("annual")}
             >
               Annual Plan

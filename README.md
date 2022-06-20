@@ -15,3 +15,7 @@
 ### Product Feature section:
 
 <img src= "product-feature.png">
+
+### Product Feature section:
+
+<img src= "pricing-plan.png">
