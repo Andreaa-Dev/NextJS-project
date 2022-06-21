@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Box } from "theme-ui";
-import Drawer from "components/drawer";
 import { Scrollbars } from "react-custom-scrollbars";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { Link } from "react-scroll";
@@ -11,6 +10,7 @@ import {
   FaDribbble,
 } from "react-icons/fa";
 
+import Drawer from "components/drawer";
 import menuItems from "./header.data";
 
 const social = [
@@ -39,7 +39,7 @@ function MobileDrawer() {
     <Drawer
       width="320px"
       drawerHandler={
-        <Box style={styles.handler}>
+        <Box sx={styles.handler}>
           <IoMdMenu size="26px" />
         </Box>
       }
@@ -84,14 +84,14 @@ export default MobileDrawer;
 
 const styles = {
   handler: {
-    display: "none",
+    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     flexShrink: "0",
     width: "26px",
     marginLeft: "20px",
-    "@media screen and (max-width: 1000px)": {
-      display: "flex",
+    "@media screen and (min-width: 1024px)": {
+      display: "none",
     },
   },
 
