@@ -61,6 +61,7 @@ export default function ServiceSection() {
               <IoIosPlay />
             </span>
           </Button>
+
           <Box sx={styles.shapeBox}>
             <Image src={shapePattern} alt="shape" />
           </Box>
@@ -83,13 +84,13 @@ export default function ServiceSection() {
             ))}
           </Grid>
         </Box>
+        <ModalVideo
+          channel="youtube"
+          isOpen={videoOpen}
+          videoId="X9lJTBgkCbw"
+          onClose={() => setVideoOpen(false)}
+        />
       </Container>
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="X9lJTBgkCbw"
-        onClose={() => setVideoOpen(false)}
-      />
     </section>
   );
 }
