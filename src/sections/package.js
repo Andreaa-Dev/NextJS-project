@@ -301,7 +301,7 @@ export default function Package() {
         <Box sx={styles.pricingWrapper} className="pricing__wrapper">
           <Carousel {...sliderParams}>
             {state.pricingPlan.map((packageData) => (
-              <Box sx={styles.pricingItem}>
+              <Box key={packageData.id} sx={styles.pricingItem}>
                 <PriceCard data={packageData} />
               </Box>
             ))}
