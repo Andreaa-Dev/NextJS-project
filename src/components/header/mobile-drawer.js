@@ -84,16 +84,17 @@ export default MobileDrawer;
 
 const styles = {
   handler: {
-    display: "flex",
+    display: "none",
     alignItems: "center",
     justifyContent: "center",
     flexShrink: "0",
     width: "26px",
     marginLeft: "20px",
-    "@media screen and (min-width: 1024px)": {
-      display: "none",
+    "@media screen and (max-width: 1000px)": {
+      display: "flex",
     },
   },
+
   drawer: {
     width: "100%",
     height: "100%",
