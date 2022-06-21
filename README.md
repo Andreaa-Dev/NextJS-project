@@ -1,6 +1,6 @@
 # Live version
 
-coming soon ...
+https://next-js-project-opwy7ybi9-andreaa-dev.vercel.app/
 
 # Sections
 
