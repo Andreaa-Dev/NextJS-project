@@ -89,6 +89,7 @@ export default function ServiceSection() {
           isOpen={videoOpen}
           videoId="X9lJTBgkCbw"
           onClose={() => setVideoOpen(false)}
+          classNames="modal-video"
         />
       </Container>
     </section>
