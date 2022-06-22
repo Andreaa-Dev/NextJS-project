@@ -42,17 +42,20 @@ const data = {
 };
 
 export default function ServiceSection() {
-  const [videoOpen, setVideoOpen] = useState(false);
-  const handleClick = (event) => {
-    event.preventDefault();
-    setVideoOpen(true);
-  };
+  // const [videoOpen, setVideoOpen] = useState(false);
+
+  // const [isOpen, setOpen] = useState(false);
+
+  // const handleClick = (event) => {
+  //   event.preventDefault();
+  //   setVideoOpen(true);
+  // };
   return (
     <section sx={{ variant: "section.services" }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={ServiceThumb} alt="Thumbnail" />
-          <Button
+          {/* <Button
             sx={styles.videoBtn}
             onClick={handleClick}
             aria-label="Play Button"
@@ -60,10 +63,16 @@ export default function ServiceSection() {
             <span>
               <IoIosPlay />
             </span>
-          </Button>
-          <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="shape" />
-          </Box>
+          </Button> */}
+          {/* <ModalVideo
+            channel="youtube"
+            isOpen={videoOpen}
+            videoId="X9lJTBgkCbw"
+            onClose={() => setVideoOpen(false)}
+          /> */}
+        </Box>
+        <Box sx={styles.shapeBox}>
+          <Image src={shapePattern} alt="shape" />
         </Box>
         <Box sx={styles.contentBox}>
           <TextFeature subTitle={data.subTitle} title={data.title} />
@@ -84,12 +93,6 @@ export default function ServiceSection() {
           </Grid>
         </Box>
       </Container>
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="X9lJTBgkCbw"
-        onClose={() => setVideoOpen(false)}
-      />
     </section>
   );
 }
@@ -236,11 +239,11 @@ const styles = {
       paddingTop: "56.25%",
     },
     iframe: {
-      width: "100%",
-      height: "100%",
+      width: "500px",
+      height: "500px",
       position: "absolute",
-      top: 0,
-      left: 0,
+      top: 100,
+      left: 100,
     },
   },
 };
