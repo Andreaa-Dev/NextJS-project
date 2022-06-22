@@ -42,20 +42,20 @@ const data = {
 };
 
 export default function ServiceSection() {
-  const [videoOpen, setVideoOpen] = useState(false);
+  // const [videoOpen, setVideoOpen] = useState(false);
 
-  const [isOpen, setOpen] = useState(false);
+  // const [isOpen, setOpen] = useState(false);
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    setVideoOpen(true);
-  };
+  // const handleClick = (event) => {
+  //   event.preventDefault();
+  //   setVideoOpen(true);
+  // };
   return (
     <section sx={{ variant: "section.services" }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={ServiceThumb} alt="Thumbnail" />
-          <Button
+          {/* <Button
             sx={styles.videoBtn}
             onClick={handleClick}
             aria-label="Play Button"
@@ -63,13 +63,13 @@ export default function ServiceSection() {
             <span>
               <IoIosPlay />
             </span>
-          </Button>
-          <ModalVideo
+          </Button> */}
+          {/* <ModalVideo
             channel="youtube"
             isOpen={videoOpen}
             videoId="X9lJTBgkCbw"
             onClose={() => setVideoOpen(false)}
-          />
+          /> */}
         </Box>
         <Box sx={styles.shapeBox}>
           <Image src={shapePattern} alt="shape" />
