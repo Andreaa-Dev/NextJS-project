@@ -43,6 +43,9 @@ const data = {
 
 export default function ServiceSection() {
   const [videoOpen, setVideoOpen] = useState(false);
+
+  const [isOpen, setOpen] = useState(false);
+
   const handleClick = (event) => {
     event.preventDefault();
     setVideoOpen(true);
@@ -61,10 +64,15 @@ export default function ServiceSection() {
               <IoIosPlay />
             </span>
           </Button>
-
-          <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="shape" />
-          </Box>
+          <ModalVideo
+            channel="youtube"
+            isOpen={videoOpen}
+            videoId="X9lJTBgkCbw"
+            onClose={() => setVideoOpen(false)}
+          />
+        </Box>
+        <Box sx={styles.shapeBox}>
+          <Image src={shapePattern} alt="shape" />
         </Box>
         <Box sx={styles.contentBox}>
           <TextFeature subTitle={data.subTitle} title={data.title} />
@@ -84,13 +92,6 @@ export default function ServiceSection() {
             ))}
           </Grid>
         </Box>
-        <ModalVideo
-          channel="youtube"
-          isOpen={videoOpen}
-          videoId="X9lJTBgkCbw"
-          onClose={() => setVideoOpen(false)}
-          classNames="modal-video"
-        />
       </Container>
     </section>
   );
@@ -238,11 +239,11 @@ const styles = {
       paddingTop: "56.25%",
     },
     iframe: {
-      width: "100%",
-      height: "100%",
+      width: "500px",
+      height: "500px",
       position: "absolute",
-      top: 0,
-      left: 0,
+      top: 100,
+      left: 100,
     },
   },
 };
